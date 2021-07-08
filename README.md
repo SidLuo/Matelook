@@ -1,5 +1,5 @@
 # Matelook
-A social media platform where users can view their dashboard, make new posts, comment on posts, tag their friends, and change their personal details.
+A social media platform where users can view their dashboard, make new posts, comment on posts, tag their friends, and change their personal details. Database missing.
 
 18/10/16	19:35	22:30	implemented Logging In & Out feature with cookies
 
