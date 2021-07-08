@@ -1,0 +1,575 @@
+/*
+ * written by andrewt@cse.unsw.edu.au September 2016
+ * as a starting point for COMP2041/9041 assignment 2
+ * http://cgi.cse.unsw.edu.au/~cs2041/assignments/matelook/
+ *
+ * Change (or replace) the CSS below to create you own look-and-feel
+ *
+ * You will probably want to add  CSS to this file too
+ */
+ 
+body {
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap{
+	margin:0 auto;
+	width:98%;
+	transition:all .2s linear;
+	-moz-transition:all .2s linear;/* firefox */
+	-webkit-transition:all .2s linear; /* safari and chrome */
+	-o-transition:all .2s linear; /* opera */
+	-ms-transition:all .2s linear;
+}
+
+img { max-width: 100%; }
+*:active, *:focus { outline-width: 0px; }
+img { max-width: 100% }
+.post .top.media img { width: 100%; }
+a { text-decoration: none; color: #fbf6d9; }
+a img { border-width: 0px; }
+strong { font-weight: bold; }
+em { font-style: italic; }
+
+#color_bar {
+    height: 12px;
+    background: #fbf6d9;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+}
+
+#container {
+    width: 950px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+#header {
+    height: 48px;
+    margin: 0 0 60px 0;
+}
+
+
+.post {
+    width: 700px;
+    float: left;
+    list-style: none;
+    font-size: 20px;
+    list-style-type: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: #4C4C4C;
+    border-bottom: 1px solid #E6E6E6;
+    margin: 0 0 45px 0;
+    padding: 0 0 45px 0;
+}
+
+.post img {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    margin: 0 0 0 4px !important;
+    vertical-align: middle;
+}
+
+#mate_info h1 {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 36px;
+    margin: 8px 0 0 0;
+}
+
+#mate_info h1 a {
+    color: #333333;
+}
+                
+#mate_info h1 a:hover {
+    color: #000;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+#mate_info h1 a:active {
+    position: relative;
+    top: 1px;
+}
+
+
+.cont {
+    margin-bottom: 7px;
+}
+
+#mate_avatar {
+    width: 188px;
+    position: relative;
+    float: right;
+    
+}
+
+#mate_avatar a {
+    width: 48px;
+    height: 48px;
+    
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, .21);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .21);
+      
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+#mate_avatar img {
+    width: 48px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+#mate_avatar a::before {
+    content: " ";
+    width: 46px;
+    height: 46px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,.1);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    display: block;
+}
+
+#mate_avatar:hover a {
+    width: 64px;
+    height: 64px;
+    top: -8px;
+    left: -8px;
+}
+
+#mate_avatar:hover a img {
+    width: 64px;
+}
+
+#mate_avatar:hover a::before {
+    width: 62px;
+    height: 62px;
+}
+
+#mate_avatar:active a {
+    top: -7px;
+    -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, .21);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, .21);
+}
+
+
+h2 {
+    font-size: 32px;
+    line-height: 33px;
+    margin: 0 0 18px 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+h3 {
+  font: bold 20px/1.5 'Helvetica Neue', Helvetica, Verdana, sans-serif;
+}
+
+#sidebar {
+    width: 188px;
+    color: #4c4c4c;
+    font-size: 14px;
+    margin: -8px 0 0 0;
+    float: right;
+}
+
+#sidebar .description {
+    line-height: 21px;
+    border-bottom: 1px solid #E6E6E6;
+    margin: 3px 0 20px 0;
+    padding: 0 0 20px 0;
+}
+
+#sidebar .links {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    list-style-type: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    margin: 0 0 20px 0;
+    line-height: 20px;
+}
+
+#sidebar .links a {
+    color: #4c4c4c;
+}
+
+#sidebar .links a:hover {
+    color: #fbf6d9;
+}
+
+.links .icon {
+    width: 12px;
+    height: 12px;
+    background: #383838 url('http://static.tumblr.com/thpaaos/1xRm66voi/icons_sprite.png');
+    margin: 0 8px 0 0;
+    display: inline-block;
+}
+
+.links a:hover .icon {
+    background-color: #fbf6d9;
+}
+
+
+.edit_profile input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.edit_profile password {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+
+/*from http://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_hover*/
+
+.mybutton {
+    background-color: white;
+    color: #bebebe;
+    border: 2px solid #fbf6d9;
+    padding: 6px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 2px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mybutton:hover {
+    background-color: #fbf6d9;
+}
+
+.mates img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+.profile_link {
+    display: inline;
+    background-color: white;
+    color: #4C4C4C;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    text-decoration: underline;
+    text-align: left;
+}
+
+/* from http://www.bloggermint.com/2011/06/css3-search-box-inspired-by-apple-com/ */
+#search {}
+
+#search input[type="text"] {
+    background: url(search-white.png) no-repeat 10px 6px #fbf6d9;
+    border: 1px solid #fbf6d9;
+    font: bold 14px;
+    color: #bebebe;
+    width: 140px;
+    padding: 6px 15px;
+    margin: 4px 2px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 2px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+#search input[type="text"]:focus {
+    width: 188px;
+}
+
+textarea {
+    background: url(search-white.png) no-repeat 10px 6px white;
+    border: 1px solid #fbf6d9;
+    font: 16px;
+    color: #bebebe;
+    width: 623px;
+    padding: 6px 15px;
+    margin: 4px 2px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+password {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+
+.post_info {
+    width: auto;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    list-style-type: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    margin: 1px 0 0 -3px;
+    overflow: hidden;
+}
+
+.timestamp_button {
+    display: inline;
+    background-color: white;
+    color: #4C4C4C;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    -webkit-font-smoothing: subpixel-antialiased;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timestamp_button:hover {
+    background: rgba(0,0,0,.08);
+}
+
+.timestamp_button:active {
+    background: rgba(0,0,0,.1);
+}
+
+.timestamp {
+    border: 0;
+    color: #4c4c4c;
+    padding: 0 2px 0 5px;
+    display: inline-block;
+}
+
+.notecount {
+    color: #4c4c4c;
+    padding: 0 2px 0 5px;
+    display: inline-block;
+}
+
+.notecount:hover {
+    background: rgba(0,0,0,.08);
+}
+
+.notecount:active {
+    background: rgba(0,0,0,.1);
+}
+
+.post .caption {
+    width: 513px;
+    float: right;
+}
+
+/*from http://codepen.io/colorlib/pen/rxddKy*/
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.login-page .form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.login-page .form input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.login-page .form button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #fbf6d9;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  font-size: 14px;
+  -webkit-transition: all 0.4 ease;
+  transition: all 0.4 ease;
+  cursor: pointer;
+}
+.login-page .form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.login-page .form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.login-page .form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.login-page .form .register-form {
+  display: none;
+}
+.login-page .container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.login-page .container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.login-page .container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.login-page .container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.login-page .container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.login-page .container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.login-page .container .info span .fa {
+  color: #EF3B3A;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content: from http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.footer {
+    clear: both;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    margin: auto;
+    background-color: white;
+    text-align: center;
+    color: #bebebe;
+}
+
+.footer link {
+    color: #bebebe;
+}
